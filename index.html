@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaita Nakamura</title>
+  <meta name="description" content="Personal site of Kaita Nakamura">
+  <meta property="og:title" content="Kaita Nakamura">
+  <meta property="og:description" content="Personal site of Kaita Nakamura">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://z63d.github.io">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 20px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin: 0 16px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .links {
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+
+    .links-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .links-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #111;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .links-links a:hover {
+      text-decoration: underline;
+    }
+
+    .links-links svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    section {
+      padding: 60px 0;
+      scroll-margin-top: 52px;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .entry {
+      margin-bottom: 28px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry:not(:has(.entry-sub)) {
+      padding-bottom: 26px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+    }
+
+    .entry-title {
+      font-weight: 600;
+    }
+
+    .entry-period {
+      color: #666;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .entry-sub {
+      color: #666;
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .entry-title a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .entry-title a:hover {
+      color: #666;
+    }
+
+    .entry-sub a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .entry-sub a:hover {
+      text-decoration: underline;
+      color: #111;
+    }
+
+    .home {
+      padding: 56px 0 0;
+      text-align: center;
+    }
+
+    .home-tags {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .home-tags span {
+      font-size: 14px;
+      color: #555;
+      background: #f4f4f4;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 480px) {
+      .home {
+        padding: 40px 0 0;
+      }
+
+      .links {
+        padding: 36px 0 28px;
+      }
+
+      section {
+        padding: 44px 0;
+      }
+
+      .entry-header {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <a href="#">Home</a>
+  <a href="#links">Links</a>
+  <a href="#career">Career</a>
+  <a href="#talks">Talks</a>
+</nav>
+
+<main>
+  <div class="home">
+    <div class="home-tags">
+      <span>SRE</span>
+      <span>Raycast Community Japan</span>
+      <span>Raycast Ambassador</span>
+    </div>
+  </div>
+
+  <section class="links" id="links">
+    <div class="links-links">
+      <a href="https://github.com/z63d" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+      <a href="https://x.com/z63d_" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+        X
+      </a>
+      <a href="https://zenn.dev/z63d" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.264 23.771h4.984c.264 0 .498-.147.645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72c-.235 0-.44.117-.557.323L.03 23.361c-.088.176.029.41.234.41zM17.445 23.419l6.479-10.408c.205-.323-.029-.733-.41-.733h-4.691c-.176 0-.352.088-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779c.234-.001.468-.118.586-.353z"/></svg>
+        Zenn
+      </a>
+      <a href="https://speakerdeck.com/z63d" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.025 13.875H4.687a4.688 4.688 0 0 1 0-9.375h6.227a1.875 1.875 0 0 1 0 3.75H4.592a.937.937 0 1 0 0 1.875h5.337a4.687 4.687 0 1 1 0 9.375H1.875a1.875 1.875 0 0 1 0-3.75h8.15a.938.938 0 0 0 0-1.875zM13.97 19.5a5.635 5.635 0 0 0 2.396-3.75h3.026a.93.93 0 0 0 .921-.938V9.189a.93.93 0 0 0-.921-.938h-5.497c.438-.498.704-1.155.704-1.875s-.266-1.377-.704-1.875h6.418C22.35 4.5 24 6.179 24 8.25v7.5c0 2.071-1.65 3.75-3.687 3.75H13.97z"/></svg>
+        Speaker Deck
+      </a>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2>Career</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">株式会社primeNumber</span>
+        <span class="entry-period">2025.06 – Present</span>
+      </div>
+      <div class="entry-sub">SRE</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">株式会社スリーシェイク</span>
+        <span class="entry-period">2024.01 – 2025.05</span>
+      </div>
+      <div class="entry-sub">SRE</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">株式会社MONO Technologies</span>
+        <span class="entry-period">2024.01 – 2025.02</span>
+      </div>
+      <div class="entry-sub">Software Engineer (Contract)</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">株式会社MONO Technologies</span>
+        <span class="entry-period">2022.10 – 2023.12</span>
+      </div>
+      <div class="entry-sub">Software Engineer</div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <div class="entry">
+      <div class="entry-title">パネルディスカッション『そこが聞きたい！クラウド・AIのコストの話』</div>
+      <div class="entry-sub"><a href="https://yuru-sre.connpass.com/event/398199/" target="_blank" rel="noopener">ゆるSRE勉強会 #17 〜実践！クラウド・AIのインフラ費用最適化〜</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/about-how-the-new-slo-is-fitting-in-nicely" target="_blank" rel="noopener">新しい SLO が良い感じにハマっている話</a></div>
+      <div class="entry-sub"><a href="https://topotal.connpass.com/event/399194/" target="_blank" rel="noopener">もう一度考えるSRE #1</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/quan-she-denosohutoueasapuraitiengong-ji-dui-ce-woyatutemita-with-takumi-guard" target="_blank" rel="noopener">全社でのソフトウェアサプライチェーン攻撃対策をやってみた with Takumi Guard</a></div>
+      <div class="entry-sub"><a href="https://tamachi-sre.connpass.com/event/394914/" target="_blank" rel="noopener">Tamachi.sre#5</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://techworld.connpass.com/event/397387/" target="_blank" rel="noopener">【Raycast Community Japanの人に聞く】Raycastで変わる作業環境・活用法</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/finops-detadoribunnayi-si-jue-ding-womu-zhi-site" target="_blank" rel="noopener">【FinOps】データドリブンな意思決定を目指して</a></div>
+      <div class="entry-sub"><a href="https://layerx.connpass.com/event/394351/" target="_blank" rel="noopener">The SRE Backlog: 蔵出し事例共有会</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/slo-duo-yang-naqi-dai-zhi-toxiang-kihe-tutemita" target="_blank" rel="noopener">【SLO】"多様な期待値" と向き合ってみた</a></div>
+      <div class="entry-sub"><a href="https://sre-connect.connpass.com/event/381108/" target="_blank" rel="noopener">SRE Kaigi 2026 延長戦 ~ ゆるSRE勉強会もあるよ！ ~</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/raycast-community-japan-cloudnative-days-winter-2025" target="_blank" rel="noopener">Raycast Community Japan</a></div>
+      <div class="entry-sub"><a href="https://cloudnativedays.jp/cndw2025/talks/2774" target="_blank" rel="noopener">CloudNative Days Winter 2025</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/kubernetes-niokeru-cgroup-driver-nosikumi-runwasi-no-bugfix-yori" target="_blank" rel="noopener">Kubernetes における cgroup driver のしくみ: runwasi の bugfix より</a></div>
+      <div class="entry-sub"><a href="https://k8sjp.connpass.com/event/365262/" target="_blank" rel="noopener">Kubernetes Meetup Tokyo #71</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/eks-pod-identity-niokerutui-yi-de-na-session-tags" target="_blank" rel="noopener">EKS Pod Identity における推移的な session tags</a></div>
+      <div class="entry-sub"><a href="https://jawsug-container.connpass.com/event/361918/" target="_blank" rel="noopener">JAWS-UG コンテナ支部 入門編 #8</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://speakerdeck.com/z63d/running-webassembly-wasm-workloads-side-by-side-with-container-workloads" target="_blank" rel="noopener">Running WebAssembly (Wasm) Workloads Side-by-Side with Container Workloads</a></div>
+      <div class="entry-sub"><a href="https://k8sjp.connpass.com/event/336648/" target="_blank" rel="noopener">Kubernetes Meetup Tokyo #68 KubeCon NA 2024 Recap</a></div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
